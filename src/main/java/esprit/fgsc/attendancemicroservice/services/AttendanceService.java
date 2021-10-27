@@ -1,8 +1,6 @@
 package esprit.fgsc.attendancemicroservice.services;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,10 +22,10 @@ public class AttendanceService {
 		 return attendanceRepository.findAll();
 	}
 	
-	public String deleteAttendance(String id) {   
+	public void deleteAttendance(String id) {   
 
 		attendanceRepository.deleteById(id);
-   	return "Attendance deleted";
+   	
 	}
           
 public Attendance updateAttendance(String id,Attendance newAttendance) {

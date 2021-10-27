@@ -40,8 +40,8 @@ public class AttendanceContoller {
 	}
 	
 	@DeleteMapping("/delete/{id}")
-	public String deleteAttendance(@PathVariable String id) {
-	    return attendanceService.deleteAttendance(id.toString());
+	public void deleteAttendance(@PathVariable String id) {
+	     attendanceService.deleteAttendance(id.toString());
 	}
 
 	@PutMapping("/update/{id}")
