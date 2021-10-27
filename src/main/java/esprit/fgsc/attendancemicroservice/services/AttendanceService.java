@@ -24,10 +24,10 @@ public class AttendanceService {
 		 return attendanceRepository.findAll();
 	}
 	
-	public String deleteAttendance(String id) {   
+	public void deleteAttendance(String id) {   
 
 		attendanceRepository.deleteById(id);
-   	return "Attendance deleted";
+   	
 	}
           
 public Attendance updateAttendance(String id,Attendance newAttendance) {
